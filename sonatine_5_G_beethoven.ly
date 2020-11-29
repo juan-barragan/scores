@@ -3,7 +3,7 @@
 upper = \relative do' {
   \clef treble
   \key sol \major
-  \tempo "Moderato"
+  \tempo "Moderato" 4 = 105
   sol'2\p \acciaccatura si8 la8( sol la si )sol4 sol'8\>( re) re( si) si( sol)\!
   do2 \acciaccatura do8 si( la si do)
   % Third measure

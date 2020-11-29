@@ -1,0 +1,21 @@
+\language "français"
+
+<<
+\new Staff 
+{ \clef "treble" 
+  {
+    {
+        %s
+    }
+  }
+}
+
+\new Staff 
+{ \clef "bass" 
+  {
+    {
+        %s
+    }
+  }
+}
+>>
