@@ -5,9 +5,15 @@ upper = \relative do' {
   \key sol \major
   \time 3/4
   \tempo "Allegro moderato" 4 = 112
+  \repeat volta 2 {
   re8-1\f  re sol-2 sol si-3 si re4-5^. <sol,-1 si-3>2 re'8-4 re mi re do si do4-3^. <fad,-1 la-2>2 re8-1 re fad-2 fad la-3 la do4-5_. <fad,-1 la-3>2
-  re'8-3 (mi-4 re-3 do-2 si-1 la-2 si4-3^.) sol2-1 \bar ":|."
-  re'8-3 (mi-4 re-3 do-2 si-1 la-2 sol4.-1 )re8-1 re re sol4-3( si8-5 ) re-1 re re sol4-3( si2-5) sol8-4 sol fad fad mi mi
+  }
+  \alternative {
+    {re'8-3 (mi-4 re-3 do-2 si-1 la-2 si4-3^.) sol2-1 }
+    {re'8-3 (mi-4 re-3 do-2 si-1 la-2 sol4.-1 ) } 
+  }
+  re8-1 re[ re]
+  sol4-3( si8-5 ) re-1 re re sol4-3( si2-5) sol8-4 sol fad fad mi mi
   re4. re,8-1 re re fad4-3( si8-5) re-1 re re fad4-3( la2-5) re,8-3 mi-4 re-3 do-2 si-1 la-2 sol4.-1 re8-1\p re re sol4-3( si8) re-1 re re
   sol4( si2) sol8-4 sol fad fad mi mi re4. re,8 re re fad4( la8) re re re fad4 la2 re,8-3( mi-4 re-3 do-2 si-1 la-2 sol4-1 <si-2 sol'-5>) r \bar "|."
 }
