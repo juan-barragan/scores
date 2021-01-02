@@ -1,5 +1,8 @@
 \language "italiano"
-
+\header {
+  title = "Sonatina 5 in G mayor"
+  composer = "L. V. Beethoven"
+}
 upper = \relative do' {
   \clef treble
   \key sol \major
@@ -53,5 +56,5 @@ re, sol si sol re sol si sol re sol la sol re la' do la <sol si>4 r sol, sol sol
     \new Staff = "lower" \lower
   >>	
   \layout { }
-  \midi { }
+  \midi {  \tempo 4 = 120 }
 }

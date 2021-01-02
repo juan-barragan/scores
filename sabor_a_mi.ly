@@ -1,5 +1,8 @@
 \language "italiano"
-
+\header {
+  title = "Sabor a mi"
+  composer = "Alvaro Carrillo"
+}
 upper = \relative do'' {
   \clef treble
   \key sol \major
