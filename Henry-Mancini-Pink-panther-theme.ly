@@ -1,25 +1,28 @@
 \language "italiano"
 
 \header {
-  title = "Pink panther theme"
-  composer = "Henry Mancini"
+  title = "Ständchen (Leise flehen meine Lieder)"
+  composer = "Schubert/F Liszt"
 }
 
 upper = \relative do' {
   \clef treble
-  \key sol \major
+  \key fa \major
  
-  \tempo "Moderato"
+  \tempo "Mässig."
   
-  \clef bass 
-  R1 R R  
+ \time 3/4
+  
+  r8 <la re>_. <re fa>_. <la re>_. <re fa>_. <la re>_.
 
 }
 
 lower = \relative do {
   \clef bass
-  \key sol \major
+  \key fa \major
   
+  \time 3/4
+  <re re,>2 r4
 } 
 
 \score {
