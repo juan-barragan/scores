@@ -11,7 +11,9 @@ first_piano_upper = \relative do'''{
   \key sol \minor
   \time 2/4
 
-  r8 re16^-_\p( re^- dod re fa mib re4 do) r8 do16( do si do mib re do4 sib)
+  <sib re sol>8-._\f [r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-.  <sib re sol>8-. [r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-.  R1 
+
+  r8 re16^-_\p( re^- dod re fa mib re4 do) r8 do16^-(do^- si do mib re do4 sib)
 
   r8 re16^-( re^- do re fa mib re4 do) r8 la16^-( la^- sold la do sib la4 mi)
 
@@ -20,13 +22,17 @@ first_piano_upper = \relative do'''{
 
   r8 <sib reb fa sib>16 <sib reb fa sib> <la reb fa la> <sib reb fa sib>  <sib reb fa sib>  <do reb fa do'> <sib reb fa sib>4 <la la'> 
   r8 <la do mib la>16 <la do mib la> <sold do mib sold> <la do mib la> <do do'> <sib sib'> <la sib re la'>4 <sol sib re sol>
+  
+  r8 <sol sib re sol>( <la sib re la'> <sib sib'> <sib do mib sib>4 <la do mib la>) r8 <la la'>( <sib sib'> <do do'> <mib fa sib mib>4 <re fa sib re>)
 }
 
-first_piano_lower = \relative do'' {
+first_piano_lower = \relative do' {
   \clef treble
   \key sol \minor
+  
+  <sib re sol>8-. [r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-. <sib re sol>8-. [r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-. R1
 
-  r8 re16( re dod re fa mib re4 do) r8 do16^-( do^- si do mib re do4 sib)
+  r8 re'16--( re-- dod re fa mib re4 do) r8 do16^-( do^- si do mib re do4 sib)
 
   r8 sib16^-( sib^- la sib re do sib4 la4) r8 la16( la sold la do sib la4 sold)
 
@@ -34,19 +40,20 @@ first_piano_lower = \relative do'' {
   r8 <do mib sol>16 <do mib sol> <si mib sol> <do mib sol> mib re <do re fa>4 <sib re fa>
 
   r8 <sib re fa>16 <sib re fa> <la re fa> <sib re fa> <sib re fa> < do re fa> <sib reb fa>4 la 
-  r8 <la do mib fad>16 <la do mib fad> <sold do mib fad> <la do mib fad> do sib <la sib re>4 <sol sib re>
+  r8 <la do mib fad>16 <la do mib fad> <sold do mib fad> <la do mib fad> do sib <la sib re>4 <sol sib re> r8 <sol sib re>( <la sib re> sib <sib do mib>4 <la do mib>) r8 la( sib do <mib fa sib>4 <re fa sib>)
 }
 
 second_piano_upper = \relative do' {
   \clef treble
   \key sol \minor
         
-  <sib re sol>8-.[ r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>8-. <sib re sol>-.[ r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-.
+  <sib' re sol>8-._\f [r16 <sib re sol>-.]  <sib re sol>8-. <sib re sol>-. <sib re sol>8-.[ r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>8-.  <sib, re sol>8-._\mp [r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-. <sib re sol>8-. [r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-. 
+  
+  <sib re sol>-.[ r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-. <sib re sol>-.[ r16 <sib re sol>-.] <sib re sol>8-. <sib re sol>-.
   <do mib fad la>-.[ r16 <do mib fad la>16-.] <do mib fad la>8-.[ <do mib fad la>-.] <sib re sol>-.[ r16 <sib re sol>-.] <sib re sol>8-. <sib re fad>-.
 
   <sib re fa>8-.[ r16 <sib re fa>-.] <sib re fa>8-. <sib re fa>-. <sol dod fa>-.[ r16 <sol dod fa>-.] <sol dod fa>8-. <sol dod mi>-. 
   <fad do' mib>-.[ r16 <fad do' mib>-.] <fad do' mib>8-. <fad do' mib>-. <sol sib re>-. [r16 <sol sib re>]-. <sol sib re>8-. <sol sib re>-.
-
 
   \voiceOne
   <<
@@ -124,24 +131,51 @@ second_piano_upper = \relative do' {
   { sib'4 } 
   \context Voice="1" { 
   \voiceTwo
-  <re, sol>8-. [r16 <re sol>-.] <re sol>8-. <re sol>-.
+  <re, sol>8-. [r16 <re sol>-.] <re sol>8-. <re sol>-. 
+  \oneVoice
+  }
+  >>
+
+r8 <sol, sib re sol>( <fad sib re fad> <fa sib re fa>)
+<sol do mib>-. [r16 <sol do mib>-.] <sol do mib>8-. <sol do mib>-.
+
+   \voiceOne
+  <<
+  { sol'4 solb  } 
+  \context Voice="1" { 
+  \voiceTwo
+  <sol, do mib>8-. [r16 <sol do mib>-.] <sol do mib>8-. <sol do mib>-.
+  \oneVoice
+  }
+  >>
+
+   \voiceOne
+  <<
+  { fa'2 } 
+  \context Voice="1" { 
+  \voiceTwo
+  <fa, sib re>8-. [r16 <fa sib re>-.] <fa sib re>8-. <fa sib re>-.
   \oneVoice
   }
   >>
 
 }
 
-second_piano_lower = \relative do, {
+second_piano_lower = \relative do {
   \clef bass
   \key sol \minor
   
- <sol sol'>8-. [ r16 re''-.] sol8-. <re re,>-. <do, do'>-.[ r16 sol'-.] do8-. <sol sol,>-. <re re'>-.[ r16 la'-.] re8-. <la, la'>-. <sol sol'>8-. [ r16 re''-.] sol8-. <re re,>-. 
+  <sol, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> 
+  
+ <sol,, sol'>8-. [ r16 re''-.] sol8-. <re re,>-. <do, do'>-.[ r16 sol'-.] do8-. <sol sol,>-. <re re'>-.[ r16 la'-.] re8-. <la, la'>-. <sol sol'>8-. [ r16 re''-.] sol8-. <re re,>-. 
  
 <sol,, sol'>-.[ r16 re'-.] sol'8-. <sol, sol,>-. <la, la'>-. [r16 mib''] la8-. <la, la,> -. <re, re'>-. [ r16 la'-.] re8-. <re, re'>-. <sol, sol'>-. [ r16 re''-.] sol8-. <re re,>-.
 
-<sol,, sol'>-. [ r16 re''-.] sol8-. <re re,>-. <do do,>-. [r16 sol-.] mib8'-. <sol, sol,>-. <fa, fa'> [r16 do''-.] fa8-. <fa, fa,>-. <sib sib,>-. [r16 fa'-.] sib8-. <sib, sib,>-.
+<sol,, sol'>-. [ r16 re''-.] sol8-. <re re,>-. <do do,>-. [r16 sol-.] mib'8-. <sol, sol,>-. <fa, fa'> [r16 do''-.] fa8-. <fa, fa,>-. <sib sib,>-. [r16 fa'-.] sib8-. <sib, sib,>-.
 
 <mib, mib,>-. [r16 sib'-.] mib8 <mib, mib,>-. <la, la'>-. [r16 mi''-.] la8-. <la, la,>-. <re re,>-. [r16 la-.] re8-. re,-. <sol sol'>-. [r16 re'-.] sol8-. <re re,>-.
+
+<sol,, sol'>->^\f r r4 do8-. [r16 sol-.]  do'8-. do,-. fa,-. [r16 fa'-.] mib'8-. fa,-. sib,-. [r16 fa'-.] re'8-. fa,-.
 }
 
 \score {
