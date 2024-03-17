@@ -24,6 +24,22 @@ first_piano_upper = \relative do'''{
   r8 <la do mib la>16 <la do mib la> <sold do mib sold> <la do mib la> <do do'> <sib sib'> <la sib re la'>4 <sol sib re sol>
   
   r8 <sol sib re sol>( <la sib re la'> <sib sib'> <sib do mib sib>4 <la do mib la>) r8 <la la'>( <sib sib'> <do do'> <mib fa sib mib>4 <re fa sib re>)
+  
+  r8 <re re'>( <dod dod'> <re re'> <mi sol dod mi>4 <la, la'>) r8 <mi' mi'> <fad fad'> <sol sol'> 
+  
+    \voiceOne
+  <<
+  { la'2 } 
+  \context Voice="1" { 
+  \voiceTwo
+  la4,
+  \oneVoice
+  }
+  >>
+
+<la la,>4^\fermata \acciaccatura fa8 \stemDown  re'4~ re16 re-. re-. re-. re-. re-. re-.re-. re-. re-.re-. re-. dod~re fa^\fermata mib^\fermata \grace {re mib} re4_\p do
+\stemNeutral
+  
 }
 
 first_piano_lower = \relative do' {
@@ -41,6 +57,8 @@ first_piano_lower = \relative do' {
 
   r8 <sib re fa>16 <sib re fa> <la re fa> <sib re fa> <sib re fa> < do re fa> <sib reb fa>4 la 
   r8 <la do mib fad>16 <la do mib fad> <sold do mib fad> <la do mib fad> do sib <la sib re>4 <sol sib re> r8 <sol sib re>( <la sib re> sib <sib do mib>4 <la do mib>) r8 la( sib do <mib fa sib>4 <re fa sib>)
+  
+  r8 re( dod re <mi dod>4 la) r8 mi fad sol la2 la4^\fermata r R2 R do2
 }
 
 second_piano_upper = \relative do' {
@@ -159,13 +177,26 @@ r8 <sol, sib re sol>( <fad sib re fad> <fa sib re fa>)
   }
   >>
 
+r8 <fa' fa'> <mi mi'> <re re'> <mi sol sib dod>-. [r16 <mi sol sib dod>]-. <mi sol sib dod>8-. <mi sol sib dod> r8 <mi do'>( <re re'> <dod dod'>) 
+
+   \voiceOne
+  <<
+  { do2' } 
+  \context Voice="1" { 
+  \voiceTwo
+  do,4 r
+  \oneVoice
+  }
+  >>
+  do4 r R2 R sol8-._\p [r16 mib'-.] sol8-. do-.
+  
 }
 
 second_piano_lower = \relative do {
   \clef bass
   \key sol \minor
   
-  <sol, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> 
+  <sol, sol'>8-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> <sol,, sol'>-. [r16 re''-.] sol8-. <re re,> 
   
  <sol,, sol'>8-. [ r16 re''-.] sol8-. <re re,>-. <do, do'>-.[ r16 sol'-.] do8-. <sol sol,>-. <re re'>-.[ r16 la'-.] re8-. <la, la'>-. <sol sol'>8-. [ r16 re''-.] sol8-. <re re,>-. 
  
@@ -175,7 +206,8 @@ second_piano_lower = \relative do {
 
 <mib, mib,>-. [r16 sib'-.] mib8 <mib, mib,>-. <la, la'>-. [r16 mi''-.] la8-. <la, la,>-. <re re,>-. [r16 la-.] re8-. re,-. <sol sol'>-. [r16 re'-.] sol8-. <re re,>-.
 
-<sol,, sol'>->^\f r r4 do8-. [r16 sol-.]  do'8-. do,-. fa,-. [r16 fa'-.] mib'8-. fa,-. sib,-. [r16 fa'-.] re'8-. fa,-.
+<sol,, sol'>->^\f r r4 do8-. [r16 sol-.]  do'8-. do,-. fa,-. [r16 fa'-.] mib'8-. fa,-. sib,-. [r16 fa'-.] re'8-. fa,-. <sib, sib'>-._> r8 r4 <do do'>8 [r16 mi'] la8 <mi, mi'>-. <la la,> [r16 mi'] la8 <mi mi,> <mib, mib'> [r16 sol'] la (do mib sol)
+fad4^\fermata r R2 R do,,8 [r16 sol''] do,8 sol
 }
 
 \score {
