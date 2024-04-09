@@ -15,7 +15,7 @@ first_piano_upper = \relative do'''{
 
   r8 re16^-_\p( re^- dod re fa mib re4 do) r8 do16^-(do^- si do mib re do4 sib)
 
-  r8 re16^-( re^- do re fa mib re4 do) r8 la16^-( la^- sold la do sib la4 mi)
+  r8 sib16^-( sib^- la re sib do sib4 la) r8 la16^-( la^- sold la do sib la4 sol)
 
   r8 <re sol sib re>16 <re sol sib re> <dod sol' sib dod> <re sol sib re> <fa sol sib fa'> <mib sol sib mib> <re mib sol re'>4 
   <do mib sol do> r8 <do mib sol do>16 <do mib sol do> <si mib sol si> <do mib sol do> < mib mib'> <re re'> <do fa sol do>4 <sib re fa sib>
@@ -54,7 +54,7 @@ first_piano_lower = \relative do' {
 
   r8 re'16--( re-- dod re fa mib re4 do) r8 do16^-( do^- si do mib re do4 sib)
 
-  r8 sib16^-( sib^- la sib re do sib4 la4) r8 la16( la sold la do sib la4 sold)
+  r8 sib16^-( sib^- la sib re do sib4 la4) r8 la16( la sold la do sib la4 sol)
 
   r8 <re sol sib>16 <re sol sib> <dod sol' sib> <re sol sib> <fa sol sib> <mib sol sib> <re mib sol>4 <do mib sol> 
   r8 <do mib sol>16 <do mib sol> <si mib sol> <do mib sol> mib re <do re fa>4 <sib re fa>
